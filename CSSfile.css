@@ -1,0 +1,74 @@
+body {
+background-image: url(Music.jpg);
+background-size: cover;
+background-repeat: no-repeat;
+background-attachment: fixed;
+}
+
+/* SEARCH */
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+#searchForm fieldset {
+    width:240px;
+    position:relative;
+    display:block;
+}
+
+div.input {
+    width:120px;
+    padding:5px 15px 7px 15px;
+    border-radius:20px;
+    border:2px solid #11e8fc;
+    box-shadow:inset 0 1px 2px rgba(0,0,0,0.08);
+    float:right;
+    background:#e8edf1;
+}
+
+    div.input.focus {
+        border:2px solid #e607c9;
+        box-shadow:0 0 6px #abdcff, inset 0 1px 2px rgba(0,0,0,0.08);
+    }
+
+input#s {
+    width:100%;
+    border:6px;
+    border-radius:40px;
+    background:transparent;
+    height:20px;
+    color:#b4bdc4;
+    text-shadow:0 5px 5px #fff;
+}
+
+    input#s:focus {
+        outline:none
+    }
+
+input#searchSubmit {
+    width:30px;
+    height:20px;
+    text-indent:-9999px;
+    overflow:hidden;
+    background: url(icon-search.png) no-repeat;
+    border:0;
+    position:absolute;
+    top:15px; right:25px;
+    z-index:5;
+    display:none;
+    cursor:pointer;
+}
