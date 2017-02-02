@@ -16,22 +16,20 @@
 
 </head>
 <body>
+<navbar><center>
+	<h1 style="color: white">Welcome  To  Your  Personal  Music  Studio</h1><br>
+		<form id="form" class="form-inline">
+			<input class="form-control" size="50" placeholder="Enter the name of an artist, album, track, etc." type="text" id="search-keyword" title="Enter Search Keyword" required>
+			<input class="btn btn-danger" type="button" value="Search" onclick="Search();" />
+		</form>
+</center><navbar>
 
 	<div class="container" align="center">
-			<div class = "row">
-     			<center>
-				<h1 style="color: white">Music Studio</h1><br>
-				<form id="form" class="form-inline">
-					<input class="form-control" size="50" placeholder="Enter the name of an artist, album, track, etc." type="text" id="search-keyword" title="Enter Search Keyword" required>
-					<input class="btn btn-danger" type="button" value="Search" onclick="Search();" />
-				</form>
-				</center>
-				<br/>
-				<ul>
-				<li><div id="itunes-results"></div></li>
-				</ul>
-			</div>
+		<div class = "row">
+     	<br/>
+		<div id="itunes-results"></div></li>
 		</div>
+	</div>
 
 
 

@@ -28,7 +28,8 @@ function SearchResults(arg)
 			htmlDisplayResults += '<li class="htmlDisplayResults col-md-3">';
 			htmlDisplayResults += '<a href="' + value.trackViewUrl + '"target="_blank"><img src="' + value.artworkUrl100 + '"></a>'+ '<br>';
 			htmlDisplayResults += '<audio controls><source src="' + value.previewUrl + '"type="audio/mp4">Preview</audio>';
-			htmlDisplayResults += '<span style="color:white">' +'<p>ARTIST: ' + '<a href="' + value.artistViewUrl + '" target="_blank">' + value.artistName + '</p></a><br>';
+			htmlDisplayResults += '<span style="color:white">' +'<p>ARTIST: ' + '<a href="' + value.artistViewUrl + '" target="_blank">' + value.artistName + '</p></a>';
+			htmlDisplayResults += '<span style="color:white">' + '<p>SONG: ' + value.songName + '</span></p>';
 			htmlDisplayResults += '<span style="color:white">' + '<p>GENRE: ' + value.primaryGenreName + '</span></p><br>';
 			htmlDisplayResults += '</li>';
 		})
