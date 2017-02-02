@@ -125,9 +125,9 @@ input.btn, .btn:focus, .btn:active, .btn:target .btn:focus, .btn:active:focus, .
 }
 
 .container {
-
-  width: 1000px;
-  height: 700px;
-  margin-top: 86px;
-  position:relative;
+    position: center-top;
+    width: 1000px;
+    height: 700px;
+    margin-top: 86px;
+    position:relative;
 }

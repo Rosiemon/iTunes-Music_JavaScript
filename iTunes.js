@@ -1,8 +1,10 @@
-			
-"use strict";
+function Search() {
+	// $.ajax({
+	// 	type: 'GET',
+ //        dataType: 'json',
+ //        url: 'https://itunes.apple.com/search?term=' + searchConvert($('#searchInput').val()) + '&media=music'+'&limit=20'+"&callback=?",       
+ //        success: function(items)
 
-function Search()
-	{
 		var encodedSearch = '';
 		var searchTerm = {
 			term: jQuery('#search-keyword').val(),
@@ -23,23 +25,12 @@ function SearchResults(arg)
 		var htmlDisplayResults = '';
 
 		$.each(results, function(key, value){
-
-			htmlDisplayResults += '<div class="row" style="height: 200px;">';
-								
-			htmlDisplayResults += '<a href="' + value.trackViewUrl + '"target="_blank"><img style="margin-left: 100px; margin-right: 100px; margin-top: 9px; height: 175px;" align="left" src="' + value.artworkUrl100 + '"></a>';
-			htmlDisplayResults += '<table>'
-			
-			htmlDisplayResults += '<col width="500">';
-			htmlDisplayResults += '<col width="500">';
-
-			htmlDisplayResults += '<td><span class="label"></span><a href="' + value.artistViewUrl + '" target="_blank">' + '<p>Artist: ' + value.artistName + '</p></a><br>';
-			htmlDisplayResults += '<span class="label"></span>' + '<p>Genre: ' + value.primaryGenreName + '</p><br> </td>';
-			
-			htmlDisplayResults += '<td> <audio controls><source src="' + value.previewUrl + '" type="audio/mp4">Preview</audio></td>&nbsp;&nbsp; </td>';
-			
-			htmlDisplayResults += '</table>';
-			htmlDisplayResults += '</div>';
-			htmlDisplayResults += '</div><br><br>';
+			htmlDisplayResults += '<li class="htmlDisplayResults col-md-3">';
+			htmlDisplayResults += '<a href="' + value.trackViewUrl + '"target="_blank"><img src="' + value.artworkUrl100 + '"></a>'+ '<br>';
+			htmlDisplayResults += '<audio controls><source src="' + value.previewUrl + '"type="audio/mp4">Preview</audio>';
+			htmlDisplayResults += '<span style="color:white">' +'<p>ARTIST: ' + '<a href="' + value.artistViewUrl + '" target="_blank">' + value.artistName + '</p></a><br>';
+			htmlDisplayResults += '<span style="color:white">' + '<p>GENRE: ' + value.primaryGenreName + '</span></p><br>';
+			htmlDisplayResults += '</li>';
 		})
 		jQuery('#itunes-results').html(htmlDisplayResults);
 	}
