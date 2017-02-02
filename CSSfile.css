@@ -1,8 +1,10 @@
 body {
 background-image: url(Music.jpg);
+background-position: center;
 background-size: cover;
 background-repeat: no-repeat;
 background-attachment: fixed;
+margin-bottom: 20%;
 }
 
 /* SEARCH */
@@ -24,56 +26,108 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-#searchForm fieldset {
-    width:240px;
-    position:relative;
-    display:block;
+.searchForm fieldset {
+    width: 240px;
+    position: relative;
+    display: block;
 }
 
 div.input {
-    width:120px;
-    padding:5px 15px 7px 15px;
-    border-radius:20px;
-    border:2px solid #11e8fc;
-    box-shadow:inset 0 1px 2px rgba(0,0,0,0.08);
-    float:right;
-    background:#e8edf1;
+    width: 120px;
+    padding: 5px 15px 7px 15px;
+    border-radius: 20px;
+    border: 2px solid #11e8fc;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.08);
+    float: right;
+    background: #e8edf1;
 }
 
-    div.input.focus {
-        border:2px solid #e607c9;
-        box-shadow:0 0 6px #abdcff, inset 0 1px 2px rgba(0,0,0,0.08);
-    }
+div.input.focus {
+    border: 2px solid #e607c9;
+    box-shadow: 0 0 6px #abdcff, inset 0 1px 2px rgba(0,0,0,0.08);
+}
 
 input 
 {
     background: url(search-icon.png) no-repeat;
+    font-family: 'open sans',arial,sans-serif;
 
 }
 
 input#s {
-    width:100%;
-    border:0px;
-    border-radius:20px;
-    background:transparent;
-    height:16px;
-    color:#b4bdc4;
-    text-shadow:0 1px 1px #fff;
+    width: 100%;
+    border: 0px;
+    border-radius: 20px;
+    background: transparent;
+    height: 16px;
+    color: black;
+    text-shadow: 0 1px 1px #fff;
 }
 
-    input#s:focus {
-        outline:none
-    }
+input#s:focus {
+    outline: none
+}
 
-input#searchSubmit {
-    width:19px;
-    height:19px;
-    text-indent:-9999px;
-    overflow:hidden;
-    border:0;
-    position:absolute;
-    top:7px; right:19px;
-    z-index:5;
-    display:none;
-    cursor:pointer;
+/*input#search-keyword {
+    width: 19px;
+    height: 19px;
+    text-indent: -9999px;
+    overflow: hidden;
+    border: 0;
+    position: absolute;
+    top: 7px; 
+    right: 19px;
+    z-index: 5;
+    display: none;
+    cursor: pointer;
+}*/
+
+
+.songs-search-result {
+    border: 1px solid gray;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+.songs-search-result  .label{
+    display: inline-block;
+    text-align: left;
+    margin-left: 0px;
+    margin-top: 0px;
+    color: black;
+    font-family: 'open sans',arial,sans-serif;
+}
+
+#form {
+    position: center-top;
+    left: 0;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    /*font-size: 14px;*/
+    color: white;
+    font-family: 'open sans',arial,sans-serif;
+}
+
+input.btn:hover {
+    background-color: white;
+    border-color: white;
+    color: #3f3a7c;
+    font-family: 'open sans',arial,sans-serif;
+}
+
+input.btn, .btn:focus, .btn:active, .btn:target .btn:focus, .btn:active:focus, .btn.active:focus{
+    background-color: #3f3a7c;
+    border-color: #3f3a7c;
+    color: white;
+    font-family: 'open sans',arial,sans-serif;
+    outline: none;
+}
+
+.container {
+
+  width: 1000px;
+  height: 700px;
+  margin-top: 86px;
+  position:relative;
 }
