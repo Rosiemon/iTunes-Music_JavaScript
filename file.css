@@ -67,37 +67,6 @@ input#s {
 input#s:focus {
     outline: none
 }
-
-/*input#search-keyword {
-    width: 19px;
-    height: 19px;
-    text-indent: -9999px;
-    overflow: hidden;
-    border: 0;
-    position: absolute;
-    top: 7px; 
-    right: 19px;
-    z-index: 5;
-    display: none;
-    cursor: pointer;
-}*/
-
-
-.songs-search-result {
-    border: 1px solid gray;
-    margin-bottom: 5px;
-    padding: 5px;
-}
-
-.songs-search-result  .label{
-    display: inline-block;
-    text-align: left;
-    margin-left: 0px;
-    margin-top: 0px;
-    color: black;
-    font-family: 'open sans',arial,sans-serif;
-}
-
 #form {
     position: center-top;
     left: 0;

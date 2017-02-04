@@ -24,11 +24,11 @@ function SearchResults(arg)
 
 		$.each(results, function(key, value)
 		{
-			htmlDisplayResults += '<li class="htmlDisplayResults col-md-3">';
-			htmlDisplayResults += '<a href="' + value.trackViewUrl + '"target="_blank"><img src="' + value.artworkUrl100 + '"></a>'+ '<br>';
+			htmlDisplayResults += '<li class="htmlDisplayResults col-md-4">';
+			htmlDisplayResults += '<a href="' + value.trackViewUrl + '"target="_blank"><img src=' + value.artworkUrl100.replace('100x100', '272x272') + '></a>'+ '<br>';
 			htmlDisplayResults += '<audio controls = "" width = "50%"><source src="' + value.previewUrl + '"type="audio/mp4">Preview</audio>';
-			htmlDisplayResults += '<span style="color:white">' +'<p>ARTIST: ' + '<a href="' + value.artistViewUrl + '" target="_blank">' + value.artistName + '</p></a>';
-			htmlDisplayResults += '<span style="color:white">' + '<p>SONG: ' + value.trackName + '</span></p>';
+			htmlDisplayResults += '<span style="color:white">' +'<p>ARTIST: ' + '<a href="' + value.artistViewUrl + '" target="_blank">' + value.artistName + '</p></a> ';
+			htmlDisplayResults += '<span style="color:white">' + '<p>SONG: ' + value.trackName + '</span></p> ';
 			// htmlDisplayResults += '<span style="color:white">' + '<p>GENRE: ' + value.primaryGenreName + '</span></p><br>';
 			htmlDisplayResults += '</li>';
 		})
